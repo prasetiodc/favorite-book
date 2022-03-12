@@ -1,0 +1,42 @@
+.CardResult {
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.bodyResult {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.CardFavorite {
+  padding: 20px;
+  background-color: #fbfbfb !important;
+}
+
+.HeaderCardFavorite {
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContainerFavorite {
+  padding: 10px;
+}
+
+.PlaceholderImage {
+  height: 250px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TitleModal {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
