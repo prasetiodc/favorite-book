@@ -13,6 +13,7 @@ export default function CardResult({ data, addFavorite, listFavorite }) {
     function checkFavorite() {
       let check = listFavorite.find(el => el.id === data.id)
       if (check) setHasFavorited(true)
+      else setHasFavorited(false)
     }
 
     checkFavorite()
@@ -36,18 +37,19 @@ export default function CardResult({ data, addFavorite, listFavorite }) {
       Swal.fire({ title: 'Add to Favorite success!', icon: 'success' })
 
     } catch (err) {
-      Swal.fire({ title: 'Add to Favorite faild', titleText: 'please try again!', icon: 'error' })
+      console.log(err)
+      Swal.fire('Add to Favorite faild', 'please try again!', 'error')
     }
   }
 
   return (
     <Card className='CardResult' >
-        {
-          data.volumeInfo?.imageLinks?.smallThumbnail 
+      {
+        data.volumeInfo?.imageLinks?.smallThumbnail
           ? <img src={data.volumeInfo?.imageLinks?.smallThumbnail} style={{ width: 100, height: 150 }} alt={`thumbnail-${data.volumeInfo?.title}`} />
           : <img src={PlaceholderImage} style={{ width: 100, height: 100 }} alt={`thumbnail-${data.volumeInfo?.title}`} />
-        }       
-        
+      }
+
       <div className='bodyResult'>
         <b>Title :</b>
         <p style={{ marginBottom: '5px' }}>{data.volumeInfo?.title}</p>
